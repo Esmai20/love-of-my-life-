@@ -5,64 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إلى حبيبتي أيوشة ❤️</title>
     <style>
-        body { margin: 0; background: #640d14; color: white; font-family: sans-serif; overflow-x: hidden; }
+        body { margin: 0; background: #4a0404; color: white; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+        /* القلوب الطائرة */
         .heart { position: fixed; color: #ff4d6d; font-size: 20px; user-select: none; z-index: -1; animation: fly 5s linear infinite; }
         @keyframes fly { 0% { transform: translateY(100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; } }
+        
         .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
-        .card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); padding: 30px; border-radius: 25px; border: 2px solid #ff4d6d; width: 90%; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .photo-box { margin-bottom: 35px; }
-        .photo-box img { width: 100%; border-radius: 20px; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.3); background: #800000; display: block; }
-        .love-text { font-style: italic; color: #ffb3c1; margin-bottom: 15px; display: block; font-size: 1.2em; font-weight: bold; }
-        input { padding: 15px; border-radius: 12px; border: none; width: 80%; margin: 20px 0; text-align: center; font-size: 1.3em; background: #fff; color: #333; }
-        button { background: #ff4d6d; color: white; border: none; padding: 15px 40px; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1.2em; }
-        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 25px 0; }
-        .timer-unit { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 15px; }
-        .timer-unit span { display: block; font-size: 1.4em; font-weight: bold; color: #ffb3c1; }
+        .card { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 1px solid #ff4d6d; width: 90%; max-width: 450px; text-align: center; }
+        .photo-box { margin: 25px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .photo-box img { width: 100%; border-radius: 15px; border: 2px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .love-text { color: #ffb3c1; margin-bottom: 10px; display: block; font-size: 1.1em; font-weight: bold; }
+        input { padding: 12px; border-radius: 10px; border: none; width: 80%; margin: 15px 0; text-align: center; font-size: 1.2em; background: #fff; color: #333; }
+        button { background: #ff4d6d; color: white; border: none; padding: 12px 35px; border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 1.1em; }
+        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
+        .timer-unit { background: rgba(0,0,0,0.6); padding: 8px; border-radius: 10px; }
+        .timer-unit span { display: block; font-size: 1.3em; font-weight: bold; color: #ffb3c1; }
         #mainScreen { display: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="loginScreen" class="card">
-            <h1>💝</h1>
-            <h2>Happy Valentine's Day</h2>
-            <p>اكتب تاريخنا السري (24/9)</p>
+            <h1 style="font-size: 40px;">🎁</h1>
+            <h2>عيد حب سعيد يا أيوشة ❤️</h2>
+            <p>اكتبي تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
             <br>
-            <button onclick="check()">فتح المفاجأة ❤️</button>
+            <button onclick="check()">فتح الهدية 🔓</button>
         </div>
 
         <div id="mainScreen" class="card">
-            <h1 style="color: #ff4d6d;">كل عيد حب وإحنا سوا.. ❤️</h1>
+            <h2 style="color: #ff4d6d;">مشوارنا بدأ من يوم ❤️</h2>
             <div class="timer-grid">
                 <div class="timer-unit"><span id="d">0</span>يوم</div>
                 <div class="timer-unit"><span id="h">0</span>ساعة</div>
                 <div class="timer-unit"><span id="m">0</span>دقيقة</div>
                 <div class="timer-unit"><span id="s">0</span>ثانية</div>
             </div>
-            <p>مشوارنا بدأ من يوم: 4/12/2025</p>
+            <p>4/12/2025</p>
             <hr style="border: 0.5px solid #ff4d6d; margin: 20px 0;">
 
             <div class="photo-box">
-                <span class="love-text">"أنتِ العمر كله.."</span>
-                <img src="https://picsum.photos/id/10/400/300" alt="صورة 1">
+                <span class="love-text">"في عينيكِ صباحٌ آخر لي.."</span>
+                <img src="https://i.ibb.co/m56hV09T/1000308267.jpg" alt="صورة 1">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"ضحكتك هي حياتي.."</span>
-                <img src="https://picsum.photos/id/102/400/300" alt="صورة 2">
+                <span class="love-text">"ضحكتك هي العيد.."</span>
+                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="صورة 2">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"ربنا يخليكي ليا يا حب عمري.."</span>
-                <img src="https://picsum.photos/id/103/400/300" alt="صورة 3">
+                <span class="love-text">"إنتِ العوض الجميل.."</span>
+                <img src="https://i.ibb.co/Vp8pC22L/1000308265.jpg" alt="صورة 3">
             </div>
 
-            <p style="font-size: 1.5em; color: #ffb3c1; font-weight: bold;">بحبك يا أيوشة ❤️</p>
+            <p style="font-size: 1.4em; color: #ffb3c1; font-weight: bold;">بحبك يا أغلى ما عندي ❤️</p>
         </div>
     </div>
 
     <script>
+        // تأثير القلوب
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -76,10 +79,13 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
+                // الرسالة اللي طلبتها بالظبط يا بطل
                 alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
+                
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('mainScreen').style.display = 'block';
-                const start = new Date(2025, 11, 4); 
+                
+                const start = new Date(2025, 11, 4); // تاريخ البداية
                 setInterval(() => {
                     const diff = new Date() - start;
                     document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
