@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى حبيبتي أيوشة ❤️</title>
+    <title>إلى حبيبتي ايوشتى ❤️</title>
     <style>
         body { margin: 0; background: #4a0404; color: white; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
         .heart { position: fixed; color: #ff4d6d; font-size: 20px; user-select: none; z-index: -1; animation: fly 5s linear infinite; }
@@ -24,13 +24,13 @@
 <body>
 
     <audio id="loveSong" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        </audio>
+        <source src="https://www.mboxdrive.com/Bahaa%20Sultan%20-%20Ya%20Aeny%20Ya%20Leil.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="container">
         <div id="loginScreen" class="card">
             <h1 style="font-size: 40px;">🎁</h1>
-            <h2>Happy Valentine's Day يا أيوشة ❤️</h2>
+            <h2>Happy Valentine's Day يا ايوشتى ❤️</h2>
             <p>اكتبي تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
             <br>
@@ -48,12 +48,12 @@
             <p style="font-weight: bold;">سوا من يوم: 4/12/2025</p>
             <hr style="border: 0.5px solid #ff4d6d; margin: 20px 0;">
 
-            <div class="photo-box"><span class="love-text">"في عينيكِ صباحٌ آخر لي.."</span><img src="https://i.ibb.co/84LjS3rL/image.jpg"></div>
+            <div class="photo-box"><span class="love-text">"أنتِ العمر كله يا ايوشتى.."</span><img src="https://i.ibb.co/84LjS3rL/image.jpg"></div>
             <div class="photo-box"><span class="love-text">"ضحكتك هي العيد الحقيقي.."</span><img src="https://i.ibb.co/Jjnj2fGD/image.jpg"></div>
             <div class="photo-box"><span class="love-text">"كل لحظة معاكي هي مكسب لقلبي.."</span><img src="https://i.ibb.co/gbgS97Pr/image.jpg"></div>
-            <div class="photo-box"><span class="love-text">"ربنا يخليكي ليا يا حب عمري.."</span><img src="https://i.ibb.co/dsThVjyx/image.jpg"></div>
+            <div class="photo-box"><span class="love-text">"ربنا يخليكي ليا يا حب عمرى.."</span><img src="https://i.ibb.co/dsThVjyx/image.jpg"></div>
 
-            <p style="font-size: 1.4em; color: #ffb3c1; font-weight: bold;">بحبك يا أيوشة ❤️</p>
+            <p style="font-size: 1.4em; color: #ffb3c1; font-weight: bold;">بحبك يا ايوشتى ❤️🌚</p>
         </div>
     </div>
 
@@ -71,8 +71,27 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
-                document.getElementById('loveSong').play();
+                // تشغيل الأغنية فوراً
+                var song = document.getElementById('loveSong');
+                song.play().catch(function(error) {
+                    console.log("Audio play failed: ", error);
+                });
+
                 alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
+                
                 document.getElementById('loginScreen').style.display = 'none';
-                document.getElementById('main
-                                        
+                document.getElementById('mainScreen').style.display = 'block';
+                
+                const start = new Date(2025, 11, 4); 
+                setInterval(() => {
+                    const diff = new Date() - start;
+                    document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
+                    document.getElementById('h').innerText = Math.floor((diff/(1000*60*60))%24);
+                    document.getElementById('m').innerText = Math.floor((diff/(1000*60))%60);
+                    document.getElementById('s').innerText = Math.floor((diff/1000)%60);
+                }, 1000);
+            } else { alert("الباسورد غلط يا بطل!"); }
+        }
+    </script>
+</body>
+</html>
