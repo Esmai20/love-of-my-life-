@@ -6,10 +6,8 @@
     <title>إلى حبيبتي أيوشة ❤️</title>
     <style>
         body { margin: 0; background: #4a0404; color: white; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
-        /* القلوب الطائرة */
         .heart { position: fixed; color: #ff4d6d; font-size: 20px; user-select: none; z-index: -1; animation: fly 5s linear infinite; }
         @keyframes fly { 0% { transform: translateY(100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; } }
-        
         .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
         .card { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 1px solid #ff4d6d; width: 90%; max-width: 450px; text-align: center; }
         .photo-box { margin: 25px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
@@ -27,7 +25,7 @@
     <div class="container">
         <div id="loginScreen" class="card">
             <h1 style="font-size: 40px;">🎁</h1>
-            <h2>عيد حب سعيد يا أيوشة ❤️</h2>
+            <h2>Happy Valentine's Day ❤️</h2>
             <p>اكتبي تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
             <br>
@@ -35,37 +33,41 @@
         </div>
 
         <div id="mainScreen" class="card">
-            <h2 style="color: #ff4d6d;">مشوارنا بدأ من يوم ❤️</h2>
+            <h2 style="color: #ff4d6d;">كل عيد حب وإحنا سوا.. ❤️</h2>
             <div class="timer-grid">
                 <div class="timer-unit"><span id="d">0</span>يوم</div>
                 <div class="timer-unit"><span id="h">0</span>ساعة</div>
                 <div class="timer-unit"><span id="m">0</span>دقيقة</div>
                 <div class="timer-unit"><span id="s">0</span>ثانية</div>
             </div>
-            <p>4/12/2025</p>
+            <p style="font-weight: bold;">سوا من يوم: 4/12/2025</p>
             <hr style="border: 0.5px solid #ff4d6d; margin: 20px 0;">
 
             <div class="photo-box">
                 <span class="love-text">"في عينيكِ صباحٌ آخر لي.."</span>
-                <img src="https://i.ibb.co/m56hV09T/1000308267.jpg" alt="صورة 1">
+                <img src="https://i.ibb.co/84LjS3rL/image.jpg" alt="صورة 1">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"ضحكتك هي العيد.."</span>
-                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="صورة 2">
+                <span class="love-text">"ضحكتك هي العيد الحقيقي.."</span>
+                <img src="https://i.ibb.co/Jjnj2fGD/image.jpg" alt="صورة 2">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"إنتِ العوض الجميل.."</span>
-                <img src="https://i.ibb.co/Vp8pC22L/1000308265.jpg" alt="صورة 3">
+                <span class="love-text">"كل لحظة معاكي هي مكسب لقلبي.."</span>
+                <img src="https://i.ibb.co/gbgS97Pr/image.jpg" alt="صورة 3">
             </div>
 
-            <p style="font-size: 1.4em; color: #ffb3c1; font-weight: bold;">بحبك يا أغلى ما عندي ❤️</p>
+            <div class="photo-box">
+                <span class="love-text">"ربنا يخليكي ليا يا حب عمري.."</span>
+                <img src="https://i.ibb.co/dsThVjyx/image.jpg" alt="صورة 4">
+            </div>
+
+            <p style="font-size: 1.4em; color: #ffb3c1; font-weight: bold;">بحبك يا أيوشة ❤️</p>
         </div>
     </div>
 
     <script>
-        // تأثير القلوب
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -79,13 +81,10 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
-                // الرسالة اللي طلبتها بالظبط يا بطل
                 alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
-                
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('mainScreen').style.display = 'block';
-                
-                const start = new Date(2025, 11, 4); // تاريخ البداية
+                const start = new Date(2025, 11, 4); 
                 setInterval(() => {
                     const diff = new Date() - start;
                     document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
