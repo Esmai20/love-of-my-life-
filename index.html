@@ -25,12 +25,12 @@
 
     <audio id="loveSong" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
+        </audio>
 
     <div class="container">
         <div id="loginScreen" class="card">
             <h1 style="font-size: 40px;">🎁</h1>
-            <h2>عيد حب سعيد يا أيوشة ❤️</h2>
+            <h2>Happy Valentine's Day يا أيوشة ❤️</h2>
             <p>اكتبي تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
             <br>
@@ -71,25 +71,8 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
-                // تشغيل الصوت
                 document.getElementById('loveSong').play();
-                
                 alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
-                
                 document.getElementById('loginScreen').style.display = 'none';
-                document.getElementById('mainScreen').style.display = 'block';
-                
-                const start = new Date(2025, 11, 4); 
-                setInterval(() => {
-                    const diff = new Date() - start;
-                    document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
-                    document.getElementById('h').innerText = Math.floor((diff/(1000*60*60))%24);
-                    document.getElementById('m').innerText = Math.floor((diff/(1000*60))%60);
-                    document.getElementById('s').innerText = Math.floor((diff/1000)%60);
-                }, 1000);
-            } else { alert("الباسورد غلط يا بطل!"); }
-        }
-    </script>
-</body>
-    </html>
-    
+                document.getElementById('main
+                                        
