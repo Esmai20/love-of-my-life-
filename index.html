@@ -5,65 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Valentine's Day ❤️</title>
     <style>
-        body { margin: 0; background: #640d14; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
-        /* تأثير القلوب الطائرة */
+        body { margin: 0; background: #640d14; color: white; font-family: sans-serif; overflow-x: hidden; }
         .heart { position: fixed; color: #ff4d6d; font-size: 20px; user-select: none; z-index: -1; animation: fly 5s linear infinite; }
         @keyframes fly { 0% { transform: translateY(100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; } }
-        
         .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
         .card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); padding: 30px; border-radius: 25px; border: 2px solid #ff4d6d; width: 90%; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .photo-box { margin-bottom: 35px; }
-        .photo-box img { width: 100%; border-radius: 20px; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-        .love-text { font-style: italic; color: #ffb3c1; margin-bottom: 15px; display: block; font-size: 1.3em; font-weight: bold; text-shadow: 1px 1px 2px #000; }
+        .photo-box img { width: 100%; border-radius: 20px; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.3); background: #eee; }
+        .love-text { font-style: italic; color: #ffb3c1; margin-bottom: 15px; display: block; font-size: 1.2em; font-weight: bold; }
         input { padding: 15px; border-radius: 12px; border: none; width: 80%; margin: 20px 0; text-align: center; font-size: 1.3em; background: #fff; color: #333; }
-        button { background: #ff4d6d; color: white; border: none; padding: 15px 40px; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1.2em; transition: 0.3s; }
-        button:hover { background: #c9184a; transform: scale(1.05); }
-        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 25px 0; }
+        button { background: #ff4d6d; color: white; border: none; padding: 15px 40px; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1.2em; }
+        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 25px 0; }
         .timer-unit { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 15px; }
-        .timer-unit span { display: block; font-size: 1.6em; font-weight: bold; color: #ffb3c1; }
+        .timer-unit span { display: block; font-size: 1.4em; font-weight: bold; color: #ffb3c1; }
         #mainScreen { display: none; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <div id="loginScreen" class="card">
-            <h1 style="font-size: 50px; margin: 0;">💝</h1>
-            <h2 style="color: #ffb3c1;">Happy Valentine's Day</h2>
-            <p>اكتب تاريخنا السري عشان تشوف المفاجأة</p>
-            <input type="text" id="passInput" placeholder="DD/M">
+            <h1>💝</h1>
+            <h2>Happy Valentine's Day</h2>
+            <p>اكتب تاريخنا السري (24/9)</p>
+            <input type="text" id="passInput" placeholder="24/9">
             <br>
             <button onclick="check()">Unlock My Heart ❤️</button>
         </div>
 
         <div id="mainScreen" class="card">
-            <h1 style="color: #ff4d6d; text-shadow: 2px 2px 4px #000;">كل عيد حب وإحنا سوا.. ❤️</h1>
-            
+            <h1 style="color: #ff4d6d;">كل عيد حب وإحنا سوا.. ❤️</h1>
             <div class="timer-grid">
                 <div class="timer-unit"><span id="d">0</span>يوم</div>
                 <div class="timer-unit"><span id="h">0</span>ساعة</div>
                 <div class="timer-unit"><span id="m">0</span>دقيقة</div>
                 <div class="timer-unit"><span id="s">0</span>ثانية</div>
             </div>
-            <p style="font-size: 1.2em; font-weight: bold;">مشوارنا بدأ من يوم: 4/12/2025</p>
+            <p>مشوارنا بدأ من يوم: 4/12/2025</p>
             <hr style="border: 0.5px solid #ff4d6d; margin: 20px 0;">
 
             <div class="photo-box">
                 <span class="love-text">"في عيد الحب.. حبيت أقولك إنك أحلى صدفة في حياتي"</span>
-                <img src="https://i.ibb.co/Ldz99S9B/1000308266.jpg" alt="ذكرياتنا">
+                <img src="https://i.ibb.co/Ldz99S9B/1000308266.jpg" alt="صورة 1">
             </div>
 
             <div class="photo-box">
                 <span class="love-text">"ضحكتك هي العيد الحقيقي لقلبي"</span>
-                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="حب">
+                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="صورة 2">
             </div>
 
-            <p style="font-size: 1.8em; color: #ffb3c1; font-weight: bold; animation: pulse 1s infinite;">بحبك يا أغلى من عمري ❤️</p>
+            <div class="photo-box">
+                <span class="love-text">"كل لحظة معاكي هي مكسب لقلبي"</span>
+                <img src="https://i.ibb.co/Vp8pC22L/1000308265.jpg" alt="صورة 3">
+            </div>
+
+            <p style="font-size: 1.5em; color: #ffb3c1; font-weight: bold;">بحبك للأبد ❤️</p>
         </div>
     </div>
 
     <script>
-        // دالة إنشاء القلوب
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -76,12 +75,10 @@
         setInterval(createHeart, 300);
 
         function check() {
-            // الباسورد بتاعك المفضل
             if(document.getElementById('passInput').value === '24/9') {
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('mainScreen').style.display = 'block';
-                
-                const start = new Date(2025, 11, 4); // تاريخ البداية
+                const start = new Date(2025, 11, 4); 
                 setInterval(() => {
                     const diff = new Date() - start;
                     document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
@@ -89,7 +86,7 @@
                     document.getElementById('m').innerText = Math.floor((diff/(1000*60))%60);
                     document.getElementById('s').innerText = Math.floor((diff/1000)%60);
                 }, 1000);
-            } else { alert("ركز يا بطل، ده يومنا المميز! ❤️"); }
+            } else { alert("ركز يا بطل! ❤️"); }
         }
     </script>
 </body>
