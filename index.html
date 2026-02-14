@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عيد حب سعيد ❤️</title>
+    <title>إلى حبيبتي أيوشة ❤️</title>
     <style>
         body { margin: 0; background: #640d14; color: white; font-family: sans-serif; overflow-x: hidden; }
         .heart { position: fixed; color: #ff4d6d; font-size: 20px; user-select: none; z-index: -1; animation: fly 5s linear infinite; }
@@ -29,7 +29,7 @@
             <p>اكتب تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
             <br>
-            <button onclick="check()">فتح القلب ❤️</button>
+            <button onclick="check()">فتح المفاجأة ❤️</button>
         </div>
 
         <div id="mainScreen" class="card">
@@ -44,21 +44,21 @@
             <hr style="border: 0.5px solid #ff4d6d; margin: 20px 0;">
 
             <div class="photo-box">
-                <span class="love-text">"في عيد الحب.. حبيت أقولك إنك أحلى صدفة في حياتي"</span>
-                <img src="https://lh3.googleusercontent.com/d/1XfH_fK-UoXU_Z5L-qP7fFjY1XyU4f_N5" alt="صورة 1">
+                <span class="love-text">"أنتِ العمر كله.."</span>
+                <img src="https://i.ibb.co/Ldz99S9B/1000308266.jpg" alt="صورة 1">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"ضحكتك هي العيد الحقيقي لقلبي"</span>
-                <img src="https://lh3.googleusercontent.com/d/1Y-G_fH-UoXU_Z5L-qP7fFjY1XyU4f_N6" alt="صورة 2">
+                <span class="love-text">"ضحكتك هي حياتي.."</span>
+                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="صورة 2">
             </div>
 
             <div class="photo-box">
-                <span class="love-text">"كل لحظة معاكي هي مكسب لقلبي"</span>
-                <img src="https://lh3.googleusercontent.com/d/1Z-I_fJ-UoXU_Z5L-qP7fFjY1XyU4f_N7" alt="صورة 3">
+                <span class="love-text">"ربنا يخليكي ليا يا حب عمري.."</span>
+                <img src="https://i.ibb.co/m56hV09T/1000308267.jpg" alt="صورة 3">
             </div>
 
-            <p style="font-size: 1.5em; color: #ffb3c1; font-weight: bold;">بحبك يا أغلى من عمري ❤️</p>
+            <p style="font-size: 1.5em; color: #ffb3c1; font-weight: bold;">بحبك يا أيوشة ❤️</p>
         </div>
     </div>
 
@@ -76,6 +76,9 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
+                // الرسالة اللي طلبتها تظهر هنا
+                alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
+                
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('mainScreen').style.display = 'block';
                 const start = new Date(2025, 11, 4); 
@@ -86,7 +89,7 @@
                     document.getElementById('m').innerText = Math.floor((diff/(1000*60))%60);
                     document.getElementById('s').innerText = Math.floor((diff/1000)%60);
                 }, 1000);
-            } else { alert("ركز يا بطل! ده يومنا المميز ❤️"); }
+            } else { alert("الباسورد غلط يا بطل!"); }
         }
     </script>
 </body>
