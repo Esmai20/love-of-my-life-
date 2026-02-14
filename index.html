@@ -11,7 +11,7 @@
         .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
         .card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); padding: 30px; border-radius: 25px; border: 2px solid #ff4d6d; width: 90%; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .photo-box { margin-bottom: 35px; }
-        .photo-box img { width: 100%; border-radius: 20px; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+        .photo-box img { width: 100%; border-radius: 20px; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.3); background: #800000; display: block; }
         .love-text { font-style: italic; color: #ffb3c1; margin-bottom: 15px; display: block; font-size: 1.2em; font-weight: bold; }
         input { padding: 15px; border-radius: 12px; border: none; width: 80%; margin: 20px 0; text-align: center; font-size: 1.3em; background: #fff; color: #333; }
         button { background: #ff4d6d; color: white; border: none; padding: 15px 40px; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1.2em; }
@@ -24,7 +24,7 @@
 <body>
     <div class="container">
         <div id="loginScreen" class="card">
-            <h1 style="font-size: 50px;">💝</h1>
+            <h1>💝</h1>
             <h2>Happy Valentine's Day</h2>
             <p>اكتب تاريخنا السري (24/9)</p>
             <input type="text" id="passInput" placeholder="24/9">
@@ -45,17 +45,17 @@
 
             <div class="photo-box">
                 <span class="love-text">"أنتِ العمر كله.."</span>
-                <img src="https://i.ibb.co/Ldz99S9B/1000308266.jpg" alt="صورة 1">
+                <img src="https://picsum.photos/id/10/400/300" alt="صورة 1">
             </div>
 
             <div class="photo-box">
                 <span class="love-text">"ضحكتك هي حياتي.."</span>
-                <img src="https://i.ibb.co/67vY1X4X/1000308264.jpg" alt="صورة 2">
+                <img src="https://picsum.photos/id/102/400/300" alt="صورة 2">
             </div>
 
             <div class="photo-box">
                 <span class="love-text">"ربنا يخليكي ليا يا حب عمري.."</span>
-                <img src="https://i.ibb.co/m56hV09T/1000308267.jpg" alt="صورة 3">
+                <img src="https://picsum.photos/id/103/400/300" alt="صورة 3">
             </div>
 
             <p style="font-size: 1.5em; color: #ffb3c1; font-weight: bold;">بحبك يا أيوشة ❤️</p>
@@ -76,9 +76,7 @@
 
         function check() {
             if(document.getElementById('passInput').value === '24/9') {
-                // الرسالة اللي طلبتها تظهر هنا
                 alert("حبيبتى و نور عيني ايوشتى القمر 🌚♥️\n. بحبك يا اغلا حاجه فى حياتى و Happy Valentines day 💌💘 \nو يارب نفضل طول السنين الجايه مع بعض يا حب عمرى ♥️♥️♥️🌚💌");
-                
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('mainScreen').style.display = 'block';
                 const start = new Date(2025, 11, 4); 
