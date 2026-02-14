@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى أغلى إنسانة ❤️</title>
+    <style>
+        body { margin: 0; background: #9c0022; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid #ff4d6d; width: 85%; max-width: 400px; }
+        input { padding: 12px; border-radius: 10px; border: none; width: 80%; margin: 15px 0; text-align: center; font-size: 1.1em; }
+        button { background: #ff4d6d; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-weight: bold; }
+        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 25px 0; }
+        .timer-unit { background: rgba(0,0,0,0.3); padding: 10px; border-radius: 10px; font-size: 0.8em; }
+        .timer-unit span { display: block; font-size: 1.5em; font-weight: bold; color: #ffb3c1; }
+        #mainScreen { display: none; }
+    </style>
+</head>
+<body>
+    <div id="loginScreen" class="card">
+        <h2>أدخل التاريخ السري ❤️</h2>
+        <input type="text" id="passInput" placeholder="24/9">
+        <br>
+        <button onclick="check()">Unlock 🔓</button>
+    </div>
+
+    <div id="mainScreen" class="card">
+        <h1>ينور عيني.. ❤️</h1>
+        <div class="timer-grid">
+            <div class="timer-unit"><span id="d">0</span>يوم</div>
+            <div class="timer-unit"><span id="h">0</span>ساعة</div>
+            <div class="timer-unit"><span id="m">0</span>دقيقة</div>
+            <div class="timer-unit"><span id="s">0</span>ثانية</div>
+        </div>
+        <p>سوا من يوم: 4/12/2025</p>
+    </div>
+
+    <script>
+        function check() {
+            if(document.getElementById('passInput').value === '24/9') {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('mainScreen').style.display = 'block';
+                const start = new Date(2025, 11, 4);
+                setInterval(() => {
+                    const diff = new Date() - start;
+                    document.getElementById('d').innerText = Math.floor(diff/(1000*60*60*24));
+                    document.getElementById('h').innerText = Math.floor((diff/(1000*60*60))%24);
+                    document.getElementById('m').innerText = Math.floor((diff/(1000*60))%60);
+                    document.getElementById('s').innerText = Math.floor((diff/1000)%60);
+                }, 1000);
+            } else { alert("الباسورد غلط!"); }
+        }
+    </script>
+</body>
+</html>
