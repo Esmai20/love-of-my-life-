@@ -6,183 +6,71 @@
     <title>إلى الملكة ملك ❤️</title>
     <style>
         :root {
-            --primary-purple: #4a148c; /* بنفسجي ملكي غامق */
-            --secondary-purple: #7c43bd; /* بنفسجي فاتح */
-            --accent-gold: #ffb300; /* ذهبي لامع */
-            --bg-purple: #f3e5f5; /* خلفية بنفسجي فاتح جداً */
-            --text-color: #333;
+            --primary-purple: #4a148c; 
+            --secondary-purple: #7c43bd; 
+            --accent-gold: #ffb300; 
+            --bg-purple: #f3e5f5; 
         }
 
         body { 
             background-color: var(--bg-purple); 
             text-align: center; 
-            font-family: 'Cairo', 'Arial', sans-serif; /* خط عصري */
-            margin: 0; 
-            padding: 0; 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; padding: 0; 
             overflow-x: hidden; 
-            color: var(--text-color);
         }
 
-        /* القلوب الطايرة في الخلفية */
+        /* القلوب الطايرة */
         #heart-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
         }
         .flying-heart {
-            position: absolute;
-            color: var(--secondary-purple);
-            opacity: 0.6;
-            animation: fly linear infinite;
+            position: absolute; color: var(--secondary-purple); opacity: 0.6; animation: fly linear infinite;
         }
         @keyframes fly {
             0% { transform: translateY(100vh) scale(1); }
             100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
         }
 
-        /* تنسيق شاشة الدخول */
+        /* شاشة الدخول */
         #login-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--primary-purple);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-            transition: 1s ease-out;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--primary-purple); display: flex;
+            justify-content: center; align-items: center; z-index: 999; transition: 1s;
         }
         .login-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            width: 85%;
-            max-width: 450px;
-            border: 5px solid var(--accent-gold);
+            background: white; padding: 40px; border-radius: 30px;
+            width: 85%; max-width: 400px; border: 4px solid var(--accent-gold);
         }
-        .login-content h1 { 
-            color: var(--primary-purple); 
-            font-size: 32px; 
-            margin-bottom: 5px; 
-        }
-        .login-content h2 { 
-            color: var(--accent-gold); 
-            font-size: 20px; 
-            font-weight: normal; 
-            margin-bottom: 25px; 
-        }
-        .input-group { margin-bottom: 20px; }
         input { 
-            width: calc(100% - 30px); 
-            padding: 15px; 
-            margin: 10px 0; 
-            border: 2px solid var(--primary-purple); 
-            border-radius: 15px; 
-            text-align: center; 
-            font-size: 18px; 
-            outline: none; 
-            color: var(--primary-purple);
+            width: 80%; padding: 15px; margin: 10px 0; border: 2px solid var(--primary-purple); 
+            border-radius: 15px; text-align: center; font-size: 18px; 
         }
-        input::placeholder { color: #aaa; }
         button { 
-            background: var(--accent-gold); 
-            color: var(--primary-purple); 
-            border: none; 
-            padding: 15px 35px; 
-            border-radius: 25px; 
-            cursor: pointer; 
-            font-size: 22px; 
-            font-weight: bold; 
-            margin-top: 20px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
-        button:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: var(--accent-gold); color: var(--primary-purple); border: none; 
+            padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 20px; font-weight: bold;
         }
 
-        /* تنسيق المحتوى الرئيسي */
-        #surprise {
-            display: none;
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            position: relative;
-            z-index: 2;
-        }
+        /* المحتوى الرئيسي */
+        #surprise { display: none; padding: 40px 0; position: relative; z-index: 2; }
         
-        /* ترويسة الموقع */
-        .site-header {
-            color: var(--primary-purple);
-            font-size: 36px;
-            margin-bottom: 40px;
-            font-weight: bold;
-        }
-        .site-header span { color: var(--accent-gold); }
-
-        /* تنسيق كروت الصور (Instagram style) */
         .post-card { 
-            background: white; 
-            width: 90%; 
-            max-width: 380px; 
-            margin: 0 auto 30px auto; 
-            padding: 20px; 
-            border-radius: 25px; 
-            border: 2px solid var(--secondary-purple); 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
-            transition: 0.3s;
+            background: white; width: 90%; max-width: 380px; margin: 0 auto 30px auto; 
+            padding: 20px; border-radius: 25px; border: 2px solid var(--secondary-purple); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
-        .post-card:hover { transform: translateY(-5px); }
-        .post-card .caption { 
-            color: var(--primary-purple); 
-            font-size: 21px; 
-            font-weight: bold; 
-            margin-bottom: 15px; 
-            display: block; 
-            line-height: 1.5; 
-            border-bottom: 2px dashed var(--accent-gold);
-            padding-bottom: 10px;
+        .caption { 
+            color: var(--primary-purple); font-size: 20px; font-weight: bold; 
+            margin-bottom: 15px; display: block; border-bottom: 2px dashed var(--accent-gold); padding-bottom: 10px;
         }
-        .post-image-wrap {
-            width: 100%;
-            border-radius: 20px;
-            border: 4px solid var(--accent-gold);
-            overflow: hidden;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-        }
-        .post-card img { 
-            width: 100%; 
-            display: block; 
-        }
+        .post-card img { width: 100%; border-radius: 15px; border: 3px solid var(--accent-gold); }
         
-        /* رسالة الحب النهائية */
         .final-msg { 
-            font-size: 21px; 
-            color: var(--primary-purple); 
-            line-height: 1.8; 
-            font-weight: bold; 
-            white-space: pre-line; 
-            background: white; 
-            width: 85%; 
-            max-width: 380px; 
-            margin: 40px auto 20px auto; 
-            padding: 25px; 
-            border-radius: 20px; 
-            border: 3px solid var(--accent-gold); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            font-size: 20px; color: var(--primary-purple); line-height: 1.8; font-weight: bold; 
+            white-space: pre-line; background: white; width: 85%; max-width: 380px; 
+            margin: 40px auto; padding: 25px; border-radius: 20px; border: 3px solid var(--accent-gold); 
         }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -190,38 +78,31 @@
 
     <div id="login-overlay">
         <div class="login-content">
-            <h1>إلى ملكة قلبي ملك ❤️</h1>
-            <h2>دخلي تاريخنا الخاص (اليوم والشهر) 😉</h2>
-            <div class="input-group">
-                <input type="number" id="day" placeholder="اليوم">
-                <input type="number" id="month" placeholder="الشهر">
-            </div>
-            <button onclick="openLove()">افتحي المفاجأة الملكية 💌</button>
+            <h1 style="color:var(--primary-purple)">إلى ملكة قلبي ملك ❤️</h1>
+            <p>دخلي التاريخ (1/1) 😉</p>
+            <input type="number" id="day" placeholder="اليوم">
+            <input type="number" id="month" placeholder="الشهر">
+            <br>
+            <button onclick="openLove()">افتحي المفاجأة 💌</button>
         </div>
     </div>
 
     <div id="surprise">
-        <h1 class="site-header">بحبك يا لوكه <span>❤️</span> الملكة</h1>
+        <h1 style="color: var(--primary-purple); margin-bottom: 30px;">بحبك يا لوكه الملكة ❤️</h1>
         
         <div class="post-card">
             <span class="caption">انتي مش بس نوري.. انتي ضحكة قلبي ❤️🥺</span>
-            <div class="post-image-wrap">
-                <img src="https://i.ibb.co/v4m0YhG/1000340511.jpg">
-            </div>
+            <img src="https://i.ibb.co/v4m0YhG/1000340511.jpg">
         </div>
 
         <div class="post-card">
             <span class="caption">حبك في قلبي زي النجم في السما ✨🥰</span>
-            <div class="post-image-wrap">
-                <img src="https://i.ibb.co/680L6kH/1.jpg">
-            </div>
+            <img src="https://i.ibb.co/680L6kH/1.jpg">
         </div>
 
         <div class="post-card">
             <span class="caption">ومعاكي.. الدنيا بتضحك لي من تاني ❤️🫰</span>
-            <div class="post-image-wrap">
-                <img src="https://i.ibb.co/rRBYWGqv/3.jpg">
-            </div>
+            <img src="https://i.ibb.co/rRBYWGqv/3.jpg">
         </div>
 
         <div class="final-msg">
@@ -230,45 +111,38 @@
             بحبك يا لوكه ♥️🫰
         </div>
 
-        <audio id="music" loop preload="auto">
+        <audio id="music" loop>
             <source src="https://files.catbox.moe/18nlxq.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <script>
-        // دالة إنشاء القلوب الطايرة
         function createHearts() {
             const container = document.getElementById('heart-container');
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
                 const heart = document.createElement('div');
                 heart.classList.add('flying-heart');
-                heart.innerHTML = '❤️';
+                heart.innerHTML = '💜';
                 heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // مدة مختلفة كل قلب
-                heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+                heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
                 container.appendChild(heart);
             }
         }
 
-        // دالة فتح الموقع
         function openLove() {
             var d = document.getElementById('day').value;
             var m = document.getElementById('month').value;
             var audio = document.getElementById('music');
-            
-            // التاريخ مضبوط على 1/1
             if(d == "1" && m == "1") {
-                // مؤثر اختفاء شاشة الدخول
                 document.getElementById('login-overlay').style.opacity = '0';
                 setTimeout(function() {
                     document.getElementById('login-overlay').style.display = 'none';
                     document.getElementById('surprise').style.display = 'block';
-                    createHearts(); // ابدأ تأثير القلوب
-                    audio.play(); // ابدأ الأغنية
-                }, 1000); // اختفاء تدريجي مدته ثانية
-            } else {
-                alert("ركزي في التاريخ يا ملوكة 😉❤️");
-            }
+                    createHearts();
+                    audio.play();
+                }, 1000);
+            } else { alert("ركزي في التاريخ يا ملوكة 😉❤️"); }
         }
     </script>
 </body>
