@@ -20,7 +20,7 @@
             overflow-x: hidden; 
         }
 
-        /* القلوب الطايرة */
+        /* تأثير القلوب البنفسجي */
         #heart-container {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
         }
@@ -32,7 +32,7 @@
             100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
         }
 
-        /* شاشة الدخول */
+        /* شاشة الدخول الفخمة */
         #login-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: var(--primary-purple); display: flex;
@@ -41,17 +41,19 @@
         .login-content {
             background: white; padding: 40px; border-radius: 30px;
             width: 85%; max-width: 400px; border: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         input { 
             width: 80%; padding: 15px; margin: 10px 0; border: 2px solid var(--primary-purple); 
-            border-radius: 15px; text-align: center; font-size: 18px; 
+            border-radius: 15px; text-align: center; font-size: 18px; outline: none;
         }
         button { 
             background: var(--accent-gold); color: var(--primary-purple); border: none; 
             padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 20px; font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* المحتوى الرئيسي */
+        /* المحتوى الرئيسي المرتب */
         #surprise { display: none; padding: 40px 0; position: relative; z-index: 2; }
         
         .post-card { 
@@ -63,7 +65,10 @@
             color: var(--primary-purple); font-size: 20px; font-weight: bold; 
             margin-bottom: 15px; display: block; border-bottom: 2px dashed var(--accent-gold); padding-bottom: 10px;
         }
-        .post-card img { width: 100%; border-radius: 15px; border: 3px solid var(--accent-gold); }
+        .post-card img { 
+            width: 100%; border-radius: 15px; border: 3px solid var(--accent-gold);
+            display: block;
+        }
         
         .final-msg { 
             font-size: 20px; color: var(--primary-purple); line-height: 1.8; font-weight: bold; 
@@ -79,16 +84,16 @@
     <div id="login-overlay">
         <div class="login-content">
             <h1 style="color:var(--primary-purple)">إلى ملكة قلبي ملك ❤️</h1>
-            <p>دخلي التاريخ (1/1) 😉</p>
+            <p style="font-weight:bold; color:#666;">دخلي تاريخنا الخاص (1/1) 😉</p>
             <input type="number" id="day" placeholder="اليوم">
             <input type="number" id="month" placeholder="الشهر">
             <br>
-            <button onclick="openLove()">افتحي المفاجأة 💌</button>
+            <button onclick="openLove()">افتحي المفاجأة الملكية 💌</button>
         </div>
     </div>
 
     <div id="surprise">
-        <h1 style="color: var(--primary-purple); margin-bottom: 30px;">بحبك يا لوكه الملكة ❤️</h1>
+        <h1 style="color: var(--primary-purple); margin-bottom: 30px; font-size: 32px;">بحبك يا لوكه الملكة ❤️</h1>
         
         <div class="post-card">
             <span class="caption">انتي مش بس نوري.. انتي ضحكة قلبي ❤️🥺</span>
@@ -119,7 +124,7 @@
     <script>
         function createHearts() {
             const container = document.getElementById('heart-container');
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 25; i++) {
                 const heart = document.createElement('div');
                 heart.classList.add('flying-heart');
                 heart.innerHTML = '💜';
