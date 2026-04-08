@@ -5,24 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إلى الملكة ملك ❤️</title>
     <style>
-        :root { --primary-purple: #4a148c; --secondary-purple: #7c43bd; --accent-gold: #ffb300; --bg-purple: #f3e5f5; }
-        body { background-color: var(--bg-purple); text-align: center; font-family: 'Arial', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
-        #heart-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
-        .flying-heart { position: absolute; color: var(--secondary-purple); opacity: 0.6; animation: fly linear infinite; }
-        @keyframes fly { 0% { transform: translateY(100vh) scale(1); } 100% { transform: translateY(-10vh) scale(0.5); opacity: 0; } }
-        #login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--primary-purple); display: flex; justify-content: center; align-items: center; z-index: 999; transition: 1s; }
-        .login-content { background: white; padding: 40px; border-radius: 30px; width: 85%; max-width: 400px; border: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        input { width: 80%; padding: 15px; margin: 10px 0; border: 2px solid var(--primary-purple); border-radius: 15px; text-align: center; font-size: 18px; outline: none; }
-        button { background: var(--accent-gold); color: var(--primary-purple); border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 20px; font-weight: bold; }
+        :root {
+            --primary-purple: #4a148c; 
+            --secondary-purple: #7c43bd; 
+            --accent-gold: #ffb300; 
+            --bg-purple: #f3e5f5; 
+        }
+
+        body { 
+            background-color: var(--bg-purple); 
+            text-align: center; 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; padding: 0; 
+            overflow-x: hidden; 
+        }
+
+        /* تأثير القلوب البنفسجية الطايرة */
+        #heart-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
+        }
+        .flying-heart {
+            position: absolute; color: var(--secondary-purple); opacity: 0.6; animation: fly linear infinite;
+        }
+        @keyframes fly {
+            0% { transform: translateY(100vh) scale(1); }
+            100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+        }
+
+        /* شاشة الدخول الفخمة */
+        #login-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--primary-purple); display: flex;
+            justify-content: center; align-items: center; z-index: 999; transition: 1s;
+        }
+        .login-content {
+            background: white; padding: 40px; border-radius: 30px;
+            width: 85%; max-width: 400px; border: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        input { 
+            width: 80%; padding: 15px; margin: 10px 0; border: 2px solid var(--primary-purple); 
+            border-radius: 15px; text-align: center; font-size: 18px; outline: none;
+        }
+        button { 
+            background: var(--accent-gold); color: var(--primary-purple); border: none; 
+            padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 20px; font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;
+        }
+        button:hover { transform: scale(1.05); }
+
+        /* المحتوى الرئيسي (صور تحت بعض) */
         #surprise { display: none; padding: 40px 0; position: relative; z-index: 2; }
-        .post-card { background: white; width: 90%; max-width: 380px; margin: 0 auto 30px auto; padding: 20px; border-radius: 25px; border: 2px solid var(--secondary-purple); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .caption { color: var(--primary-purple); font-size: 20px; font-weight: bold; margin-bottom: 15px; display: block; border-bottom: 2px dashed var(--accent-gold); padding-bottom: 10px; }
-        .post-card img { width: 100%; border-radius: 15px; border: 3px solid var(--accent-gold); display: block; }
-        .final-msg { font-size: 20px; color: var(--primary-purple); line-height: 1.8; font-weight: bold; white-space: pre-line; background: white; width: 85%; max-width: 380px; margin: 40px auto; padding: 25px; border-radius: 20px; border: 3px solid var(--accent-gold); }
+        
+        .post-card { 
+            background: white; width: 90%; max-width: 380px; margin: 0 auto 30px auto; 
+            padding: 20px; border-radius: 25px; border: 2px solid var(--secondary-purple); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .caption { 
+            color: var(--primary-purple); font-size: 20px; font-weight: bold; 
+            margin-bottom: 15px; display: block; border-bottom: 2px dashed var(--accent-gold); padding-bottom: 10px;
+        }
+        .post-card img { 
+            width: 100%; border-radius: 15px; border: 3px solid var(--accent-gold);
+            display: block;
+        }
+        
+        .final-msg { 
+            font-size: 20px; color: var(--primary-purple); line-height: 1.8; font-weight: bold; 
+            white-space: pre-line; background: white; width: 85%; max-width: 380px; 
+            margin: 40px auto; padding: 25px; border-radius: 20px; border: 3px solid var(--accent-gold); 
+        }
     </style>
 </head>
 <body>
+
     <div id="heart-container"></div>
+
     <div id="login-overlay">
         <div class="login-content">
             <h1 style="color:var(--primary-purple)">إلى ملكة قلبي ملك ❤️</h1>
@@ -33,28 +92,38 @@
             <button onclick="openLove()">افتحي المفاجأة الملكية 💌</button>
         </div>
     </div>
+
     <div id="surprise">
         <h1 style="color: var(--primary-purple); margin-bottom: 30px; font-size: 32px;">بحبك يا لوكه الملكة ❤️</h1>
+        
         <div class="post-card">
             <span class="caption">انتي مش بس نوري.. انتي ضحكة قلبي ❤️🥺</span>
             <img src="1.jpg">
         </div>
+
         <div class="post-card">
             <span class="caption">حبك في قلبي زي النجم في السما ✨🥰</span>
             <img src="2.jpg">
         </div>
+
         <div class="post-card">
             <span class="caption">ومعاكي.. الدنيا بتضحك لي من تاني ❤️🫰</span>
             <img src="3.jpg">
         </div>
+
         <div class="final-msg">
             ملوكه ؟ احنا اه لسه عارفين بعض بس انتى انسانه تتحبى بسرعه و عندك قبول يا حبيبتي ♥️ 
             و إن شاء الله نكمل مع بعض للنهايه ♥️😍
             بحبك يا لوكه ♥️🫰
         </div>
-        <audio id="music" loop><source src="https://files.catbox.moe/18nlxq.mp3" type="audio/mpeg"></audio>
+
+        <audio id="music" loop>
+            <source src="https://files.catbox.moe/18nlxq.mp3" type="audio/mpeg">
+        </audio>
     </div>
+
     <script>
+        // دالة إنشاء القلوب
         function createHearts() {
             const container = document.getElementById('heart-container');
             for (let i = 0; i < 25; i++) {
@@ -67,6 +136,8 @@
                 container.appendChild(heart);
             }
         }
+
+        // فتح الموقع عند إدخال التاريخ الصح
         function openLove() {
             var d = document.getElementById('day').value;
             var m = document.getElementById('month').value;
@@ -79,7 +150,9 @@
                     createHearts();
                     audio.play();
                 }, 1000);
-            } else { alert("ركزي في التاريخ يا ملوكة 😉❤️"); }
+            } else {
+                alert("ركزي في التاريخ يا ملوكة 😉❤️");
+            }
         }
     </script>
 </body>
